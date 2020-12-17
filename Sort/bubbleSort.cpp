@@ -7,12 +7,13 @@ int len = sizeof(a) / sizeof(a[0]);
 void bubbleSort(int *a) {
     for (int i = 0; i < len - 1; i++) { // n-1次比较，n-1次循环
         int flag = 0;
-        for (int j = 0; j < len - 1 - i; j++) { //每次从头比较
+        
+        for (int j = 0; j < len - 1 - i; j++) // 每次从头比较
             if (a[j] > a[j + 1]) {
                 swap(a[j], a[j + 1]);
                 flag++;
             }
-        }
+            
         if (flag == 0)
             break;
     }
